@@ -1,17 +1,17 @@
 <h2>C# STUDY</h2>
 
-1. À¯Æ©ºê °­ÀÇ¸¦ ÅëÇÑ °øºÎ
-   - ¿¬»êÀÚ
-   - ¹è¿­, Á¶°Ç¹®, ¹İº¹¹®
-   - ±¸Á¶Ã¼¿Í Å¬·¡½º
-   - ¿À¹ö·Îµù ¿À¹ö¶óÀÌµù
+1. ìœ íŠœë¸Œ ê°•ì˜ë¥¼ í†µí•œ ê³µë¶€
+   - ì—°ì‚°ì - [X]
+   - ë°°ì—´, ì¡°ê±´ë¬¸, ë°˜ë³µë¬¸
+   - êµ¬ì¡°ì²´ì™€ í´ë˜ìŠ¤
+   - ì˜¤ë²„ë¡œë”© ì˜¤ë²„ë¼ì´ë”©
    - StreamReader, XMLReader
-   - ÀÚ·á±¸Á¶(List, Dictinary, Data Table)
+   - ìë£Œêµ¬ì¡°(List, Dictinary, Data Table)
    - Delegate, Thread
    - Exception. UserControl
-   - ¶÷´Ù½Ä, Linq, µ¿Àû·¹ÀÌ¾Æ¿ô ¸¸µé±â
+   - ëŒë‹¤ì‹, Linq, ë™ì ë ˆì´ì•„ì›ƒ ë§Œë“¤ê¸°
    - LinkedList, SortedList
    - Oracle, MS-SQL
-   - ºñµ¿±â(async, await)
+   - ë¹„ë™ê¸°(async, await)
 
-2. ÄÚµå ¸®ºä
+2. ì½”ë“œ ë¦¬ë·°
