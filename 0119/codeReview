@@ -21,7 +21,8 @@ private void button1_Click(object sender, EventArgs e)
 
             DTrim.Text = strText.Trim().ToString();
         }
-        
+
+- 간단하게 label에 등록된 Text 값으로 string 메소드를 실행한 코드이다.
 
 2. custom
 
