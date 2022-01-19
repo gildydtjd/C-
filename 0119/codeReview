@@ -48,3 +48,4 @@ public void StringHooks(string f, string data, string about = default, string ab
   - 사용자에게 설명할 것이 너무 많아진다.
     ("기능", "데이터") 기본
     ex) StringHooks("Substring", "hihihi", 4, 5);
+  - 친절하지 않은 기능이다.
