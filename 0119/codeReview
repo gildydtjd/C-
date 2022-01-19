@@ -25,9 +25,9 @@ private void button1_Click(object sender, EventArgs e)
 
 2. custom
 
-public void StringHooks(string f, string data, string about = default, string about2 = default, char about3 = default, int about4 = default, int about5 = default)
+public static void StringHooks(string f, string data, string about = default, string about2 = default, char about3 = default, int about4 = default, int about5 = default)
         {
-            if (f != null && data !=null) {
+            if (f != null && data != null) {
                 switch (f)
                 {
                     case "Contain" : DContain.Text = data.Contains(about).ToString(); break;
