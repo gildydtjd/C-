@@ -20,7 +20,7 @@ namespace _0119
 
         public void StringHooks(string f, string data, string about = default, string about2 = default, char about3 = default, int about4 = default, int about5 = default)
         {
-            if (f!=null) {
+            if (f != null && data !=null) {
                 switch (f)
                 {
                     case "Contain" : DContain.Text = data.Contains(about).ToString(); break;

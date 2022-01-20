@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.Net.Http;
+using static dragonConsole.Class1;
 namespace dragonConsole
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string b = Class1.A;
+            Console.Write(b);
         }
     }
 }
