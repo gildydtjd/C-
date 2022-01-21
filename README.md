@@ -2,8 +2,8 @@
 
 1. 유튜브 강의를 통한 공부
    - 연산자 ✔
-   - 배열, 조건문, 반복문 ✔
-   - 구조체와 클래스
+   - 배열, 조건문, 반복문  ✔
+   - 구조체와 클래스 ✔
    - 오버로딩 오버라이딩
    - StreamReader, XMLReader
    - 자료구조(List, Dictinary, Data Table)
