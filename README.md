@@ -5,7 +5,7 @@
    - 배열, 조건문, 반복문  ✔
    - 구조체와 클래스 ✔
    - 오버로딩 오버라이딩 ✔
-   - StreamReader, XMLReader
+   - StreamReader, XMLReader ✔
    - 자료구조(List, Dictinary, Data Table)
    - Delegate, Thread
    - Exception. UserControl
