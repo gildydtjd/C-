@@ -2,40 +2,28 @@
 using System.Net.Http;
 using static dragonConsole.Example2;
 using System.Net;
+using System.Threading.Tasks;
 namespace dragonConsole
 {
     class Program
     {
+        static readonly HttpClient httpClient = new HttpClient();
+
         static void Main(string[] args)
         {
-            Example.Print();
-            int b = Example.id;
-            Console.WriteLine(b);
-
-            Console.WriteLine("-------------------------");
-
-            Example2.Print();
-            int c = Example2.id;
-            Console.WriteLine(c);
-            Request();
+            Task.Run(async () => { await Dragon(); });
+            Console.Read();
         }
 
-        public static void Request(object sender, EventArgs e) : base(sender)
+        public static async Task Dragon()
         {
-            using (WebClient wc = new WebClient())
+            await Task.Run(async () =>
             {
-                var json = new WebClient().DownloadString("https://jsonplaceholder.typicode.com/todos/1");
-                Console.WriteLine(json.ToString());
-            }
-        }
-    }
-
-    class Example
-    {
-        public static int id = 0;
-        public static void Print()
-        {
-            Console.WriteLine("hihi");
+                HttpClient HttpClient = new HttpClient();
+                var res = await HttpClient.GetAsync("https://jsonplaceholder.typicode.com/todos");
+                string data = await res.Content.ReadAsStringAsync();
+                Console.WriteLine(data);
+            });
         }
     }
 }
