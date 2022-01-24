@@ -7,7 +7,7 @@
    - 오버로딩 오버라이딩 ✔
    - StreamReader, XMLReader ✔
    - 자료구조(List, Dictinary, Data Table) ✔
-   - Delegate, Thread
+   - Delegate, Thread ✔
    - Exception. UserControl
    - 람다식, Linq, 동적레이아웃 만들기
    - LinkedList, SortedList
