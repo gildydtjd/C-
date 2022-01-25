@@ -16,9 +16,9 @@ namespace _0124
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Program p = new Program();
-            p.Thread_go();
+            Application.Run(new Form1());
+            //Program p = new Program();
+            //p.Thread_go();
         }
 
         void Thread_go()
@@ -39,6 +39,9 @@ namespace _0124
             t1.Suspend();
             Console.WriteLine("Suspend 잠자는중");
             Thread.Sleep(4000);
+
+
+
 
             Console.WriteLine("Resume");
             t1.Resume();
