@@ -8,8 +8,8 @@
    - StreamReader, XMLReader ✔
    - 자료구조(List, Dictinary, Data Table) ✔
    - Delegate, Thread ✔
-   - Exception. UserControl
-   - 람다식, Linq, 동적레이아웃 만들기
+   - Exception. UserControl ✔
+   - 람다식, Linq, 동적레이아웃 만들기 ✔
    - LinkedList, SortedList
    - Oracle, MS-SQL
    - 비동기(async, await)
