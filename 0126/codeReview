@@ -1,26 +1,52 @@
-int aliveHome = 0;
-        int TotalMoney = 10000000;
+public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        int aliveHome = 0;
+        int TotalMoney = 1000000;
         object obj = new object();
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string houseName = "헨젤과 그레텔";
-            int housePrice = 100000;
-            Task.Run(() => Show(houseName, housePrice, obj));
+            if(TotalMoney > 100000)
+            {
+                string houseName = "헨젤과 그레텔";
+                int housePrice = 100000;
+                Task.Run(() => Show(houseName, housePrice, obj));
+            } else
+            {
+                MessageBox.Show("돈이 없습니다.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string houseName = "제빵왕 김탁구";
-            int housePrice = 300000;
-            Task.Run(() => Show(houseName, housePrice, obj));
+            if(TotalMoney > 300000)
+            {
+                string houseName = "제빵왕 김탁구";
+                int housePrice = 300000;
+                Task.Run(() => Show(houseName, housePrice, obj));
+            } else
+            {
+                MessageBox.Show("돈이 없습니다.");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string houseName = "인도 왕자";
-            int housePrice = 500000;
-            Task.Run(() => Show(houseName, housePrice, obj));
+            if (TotalMoney > 500000)
+            {
+                string houseName = "인도 왕자";
+                int housePrice = 500000;
+                Task.Run(() => Show(houseName, housePrice, obj));
+            } else
+            {
+                MessageBox.Show("돈이 없습니다.");
+            }
+
         }
 
         public void Show(string houseName, int housePrice, object obj)
@@ -45,6 +71,7 @@ int aliveHome = 0;
                 label1.Text = string.Format("재 산 : {0} 원", TotalMoney = TotalMoney - housePrice);
             }
         }
+    }
 
 - 열심히 이것 저것 찾아보면서 만들었다.
 - Task를 실행할때 obj 객체 를 넘겨줘서 실행 시 Lock을 걸어줌으로 실행되는동안 다른 Task가 수행되지 않도록 하였다.
