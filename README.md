@@ -10,7 +10,7 @@
    - Delegate, Thread ✔
    - Exception. UserControl ✔
    - 람다식, Linq, 동적레이아웃 만들기 ✔
-   - LinkedList, SortedList
+   - LinkedList, SortedList ✔
    - Oracle, MS-SQL
    - 비동기(async, await)
 
