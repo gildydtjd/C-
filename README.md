@@ -12,7 +12,7 @@
    - 람다식, Linq, 동적레이아웃 만들기 ✔
    - LinkedList, SortedList ✔
    - Oracle, MS-SQL ✔
-   - 비동기(async, await)
+   - 비동기(async, await) ✔
 
 2. 코드 리뷰
    - https://github.com/gildydtjd/C-/blob/main/0119/codeReview
