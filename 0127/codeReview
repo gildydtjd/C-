@@ -1,0 +1,138 @@
+DBcon.cs 코드 분석
+
+using System.Data.SqlClient;
+
+class DBcon
+    {
+        // sqlConnection 에 대한 객체 생성
+        private static SqlConnection conn = null;
+        // db연결데이터 객체 생성
+        public static string DBConnString { get; private set; }
+        
+        // db연결 상태 객체 생성
+        public static bool bDBConnCheck = false;
+        private static int errorBoxCount = 0;
+
+
+        public DBcon() { }
+
+        public static SqlConnection DBConn
+
+        {
+            get
+            {
+                if (!ConnectToDB())
+                {
+                    return null;
+                }
+                return conn;
+            }
+        }
+        
+        /// Database 접속 시도
+        public static bool ConnectToDB()
+        {
+            if (conn == null)
+            {
+                //서버명, 초기 DB명, 인증 방법
+                DBConnString = String.Format("Data Source=({0});Initial Catalog={1};Integrated Security={2}; Timeout=3", "local", "dragon", "SSPI");
+                conn = new SqlConnection(DBConnString);
+            }
+
+            try
+            {
+                if (!IsDBConnected)
+                {
+                    conn.Open();
+                    if (conn.State == System.Data.ConnectionState.Open)
+                    {
+                        bDBConnCheck = true;
+                    }
+                    else
+                    {
+                        bDBConnCheck = false;
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                errorBoxCount++;
+                if (errorBoxCount == 1)
+                {
+                }
+                return false;
+            }
+            return true;
+        }
+
+        /// Database Open 여부 확인
+
+        public static bool IsDBConnected
+        {
+            get
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        /// Database 해제
+
+        public static void Close()
+        {
+            if (IsDBConnected)
+                DBConn.Close();
+        }
+    }
+    
+Form1.cs 코드 분석 
+
+public partial class Form1 : Form
+    {
+        private DataTable data_table = null;
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            try
+            {
+                lock (DBcon.DBConn)
+                {
+                    if (!DBcon.IsDBConnected)
+                    {
+                        MessageBox.Show("db연결 안됨");
+                        return;
+                    }
+                    else
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter("select * from [dragon].[dbo].[user]", DBcon.DBConn);
+                        data_table = new DataTable();
+
+                        try
+                        {
+                            adapter.Fill(data_table);
+                            dataGridView1.DataSource = data_table;
+
+                            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        }
+                        catch
+                        {
+                            MessageBox.Show("데이터 없음");
+                        }
+
+                        DBcon.Close();
+                    }
+                }
+            } catch
+            {
+                MessageBox.Show("gridbox 오류");
+            }
+        }
+    }
+    
+    - 간단히 뽑히지만 확실하게 활용하려면 좀 더 코드에 대한 분석이 필요할 것 같다.
+    - Sql 공부 必
