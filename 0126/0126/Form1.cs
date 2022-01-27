@@ -20,28 +20,47 @@ namespace _0126
         }
 
         int aliveHome = 0;
-        int TotalMoney = 10000000;
+        int TotalMoney = 1000000;
         object obj = new object();
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string houseName = "헨젤과 그레텔";
-            int housePrice = 100000;
-            Task.Run(() => Show(houseName, housePrice, obj));
+            if(TotalMoney > 100000)
+            {
+                string houseName = "헨젤과 그레텔";
+                int housePrice = 100000;
+                Task.Run(() => Show(houseName, housePrice, obj));
+            } else
+            {
+                MessageBox.Show("돈이 없습니다.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string houseName = "제빵왕 김탁구";
-            int housePrice = 300000;
-            Task.Run(() => Show(houseName, housePrice, obj));
+            if(TotalMoney > 300000)
+            {
+                string houseName = "제빵왕 김탁구";
+                int housePrice = 300000;
+                Task.Run(() => Show(houseName, housePrice, obj));
+            } else
+            {
+                MessageBox.Show("돈이 없습니다.");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string houseName = "인도 왕자";
-            int housePrice = 500000;
-            Task.Run(() => Show(houseName, housePrice, obj));
+            if (TotalMoney > 500000)
+            {
+                string houseName = "인도 왕자";
+                int housePrice = 500000;
+                Task.Run(() => Show(houseName, housePrice, obj));
+            } else
+            {
+                MessageBox.Show("돈이 없습니다.");
+            }
+
         }
 
         public void Show(string houseName, int housePrice, object obj)

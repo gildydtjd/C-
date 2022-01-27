@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,9 +44,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -75,6 +75,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "집들이 3종 셋트";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("맑은 고딕", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(540, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(196, 25);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "3일 대여 : 500,000원";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("맑은 고딕", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(289, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(196, 25);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "3일 대여 : 300,000원";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("맑은 고딕", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(36, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(196, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "3일 대여 : 100,000원";
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.InfoText;
@@ -102,9 +133,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(12, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 15);
+            this.label1.Size = new System.Drawing.Size(138, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "재 산 : 10,000,000원";
+            this.label1.Text = "재 산 : 1,000,000원";
             // 
             // pictureBox4
             // 
@@ -199,37 +230,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(36, 200);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 25);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "3일 대여 : 100,000원";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("맑은 고딕", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(289, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 25);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "3일 대여 : 300,000원";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(540, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "3일 대여 : 500,000원";
             // 
             // Form1
             // 
