@@ -1,9 +1,15 @@
 DBcon.cs 코드 분석
 
+using System.Data.SqlClient;
+
 class DBcon
     {
+        // sqlConnection 에 대한 객체 생성
         private static SqlConnection conn = null;
+        // db연결데이터 객체 생성
         public static string DBConnString { get; private set; }
+        
+        // db연결 상태 객체 생성
         public static bool bDBConnCheck = false;
         private static int errorBoxCount = 0;
 
@@ -22,6 +28,7 @@ class DBcon
                 return conn;
             }
         }
+        
         /// Database 접속 시도
         public static bool ConnectToDB()
         {
