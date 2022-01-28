@@ -23,35 +23,43 @@ namespace _0128
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Task.Run(() => List1(List2));
+            switch (textBox1.Text)
+            {
+                case "1":
+                    Task.Run(() => List1(List2));
+                    break;
+
+                case "2":
+                    Task.Run(() => List1(List3));
+                    break;
+
+                case "3":
+                    Task.Run(() => List1(List4));
+                    break;
+            }
         }
 
         public void List4()
         {
-            listBox1.Items.Add("4번째 콜백이 시작된다.");
-            label4.Text = "성";
+            listBox1.Items.Add("콜백이 시작된다.");
+            label4.Text = "임용성";
             listBox1.Items.Add("===============.");
         }
 
         public void List3()
         {
-            listBox1.Items.Add("3번째 콜백이 시작된다.");
-            label3.Text = "용";
+            listBox1.Items.Add("콜백이 시작된다.");
+            label3.Text = "김용성";
             listBox1.Items.Add("===============.");
             Thread.Sleep(1000);
-
-            Task.Run(() => List4());
-
         }
 
         public void List2()
         {
-            listBox1.Items.Add("2번째 콜백이 시작된다.");
-            label2.Text = "길";
+            listBox1.Items.Add("콜백이 시작된다.");
+            label2.Text = "길용성";
             listBox1.Items.Add("===============.");
             Thread.Sleep(1000);
-
-            Task.Run(() => List3());
         }
 
         public void List1(Ddelegate dragon)
