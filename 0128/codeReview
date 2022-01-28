@@ -1,1 +1,48 @@
 
+private void button1_Click(object sender, EventArgs e)
+        {
+            Task.Run(() => List1(List2));
+        }
+
+        public void List4()
+        {
+            listBox1.Items.Add("4번째 콜백이 시작된다.");
+            label4.Text = "성";
+            listBox1.Items.Add("===============.");
+        }
+
+        public void List3()
+        {
+            listBox1.Items.Add("3번째 콜백이 시작된다.");
+            label3.Text = "용";
+            listBox1.Items.Add("===============.");
+            Thread.Sleep(1000);
+
+            Task.Run(() => List4());
+
+        }
+
+        public void List2()
+        {
+            listBox1.Items.Add("2번째 콜백이 시작된다.");
+            label2.Text = "길";
+            listBox1.Items.Add("===============.");
+            Thread.Sleep(1000);
+
+            Task.Run(() => List3());
+        }
+
+        public void List1(Ddelegate dragon)
+        {
+            listBox1.Items.Add("콜백이 시작된다.");
+            label1.Text = "나는";
+            listBox1.Items.Add("===============.");
+
+            Thread.Sleep(1000);
+
+            Task.Run(() => dragon());
+        }
+        
+        - delegate를 통한 callback을 사용할 상황에 대해 조금 더 공부를 해야겠다.
+        ex ) 함수 내에서 상황에 따라 다른 function을 불러오고 싶을때 사용 하는 것 같다.
+             callback 함수로 인한 result 값이 달라진다.
