@@ -23,4 +23,4 @@
    - https://github.com/gildydtjd/C-/blob/main/0125/codeReview
    - https://github.com/gildydtjd/C-/blob/main/0126/codeReview
    - https://github.com/gildydtjd/C-/blob/main/0127/codeReview
-   = https://github.com/gildydtjd/C-/blob/main/0128/codeReview
+   - https://github.com/gildydtjd/C-/blob/main/0128/codeReview
